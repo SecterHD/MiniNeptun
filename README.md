@@ -52,16 +52,16 @@ Felhasználóként egy tárgyra való jelentkezés:
   - Bejelentkezés
   - Regisztráció
 - Felhasználó:
-  -Kilépés
-  -Saját profil
-    -Tárgy leadása
-    -Óra módosítása
-  -Tárgyak böngészése
-    -Tárgy felvétele
-* Adminisztrátor:
-*Új tárgy felvétele
-  *Tárgyak böngészése
-    *Tárgy törlése
-  *Felhasználók böngészése
-    *Felhasználó lejelentkeztetése
+  - Kilépés
+  - Saját profil
+    - Tárgy leadása
+    - Óra módosítása
+  - Tárgyak böngészése
+    - Tárgy felvétele
+- Adminisztrátor:
+  - Új tárgy felvétele
+  - Tárgyak böngészése
+    - Tárgy törlése
+  - Felhasználók böngészése
+    - Felhasználó lejelentkeztetése
 
