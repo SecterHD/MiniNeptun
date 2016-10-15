@@ -47,10 +47,10 @@ Felhasználóként egy tárgyra való jelentkezés:
 ## Oldaltérkép
 
 * Publikus:
-  *Főoldal
-  *Tárgyak böngészése
-  *Bejelentkezés
-  *Regisztráció
+*  Főoldal
+*  Tárgyak böngészése
+*  Bejelentkezés
+*  Regisztráció
 * Felhasználó:
   *Kilépés
   *Saját profil
@@ -59,7 +59,7 @@ Felhasználóként egy tárgyra való jelentkezés:
   *Tárgyak böngészése
     *Tárgy felvétele
 * Adminisztrátor:
-  *Új tárgy felvétele
+*Új tárgy felvétele
   *Tárgyak böngészése
     *Tárgy törlése
   *Felhasználók böngészése
