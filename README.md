@@ -47,10 +47,10 @@ Felhasználóként egy tárgyra való jelentkezés:
 ## Oldaltérkép
 
 - Publikus:
-..*Főoldal
-  -Tárgyak böngészése
-  -Bejelentkezés
-  -Regisztráció
+  - Főoldal
+  - Tárgyak böngészése
+  - Bejelentkezés
+  - Regisztráció
 - Felhasználó:
   -Kilépés
   -Saját profil
