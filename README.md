@@ -88,11 +88,19 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 ## Osztálymodell:
 
-![Folyamat](https://github.com/SecterHD/MiniNeptun/blob/master/uml/nomnoml (3).png)
+![modell](https://github.com/SecterHD/MiniNeptun/blob/master/uml/nomnoml (3).png)
 
 ## Oldalvázlatok:
 
-![Folyamat](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/nomnoml (1).png)
+![login](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 1.png)
+![reg](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 1 copy.png)
+![subjects](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 2.png)
+![orak](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3.png)
+![profil](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3 copy.png)
+![users](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3 copy 2.png)
+
+
+
 
 
 
