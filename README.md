@@ -47,7 +47,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 ## Oldaltérkép
 
 - Publikus:
-  -Főoldal
+..*Főoldal
   -Tárgyak böngészése
   -Bejelentkezés
   -Regisztráció
