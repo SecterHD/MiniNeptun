@@ -1,8 +1,8 @@
 # MiniNeptun
 Alkalmazások Fejlesztése Beadandó - MiniNeptun
 
-#Mini Neptun
-##Funkcionális követelmények:
+# Mini Neptun
+## Funkcionális követelmények:
 * Vendégként főoldalon láthatók a kiemelt kötelező tárgyak ,melyeket elvégzendő félév szerint lehet kategóriákba szedni.
 * Vendégként lehet böngészni a tárgyak között.
 * Vendégként lehet látni a tárgy leírását,oktatót, és a választható időpontokat.
@@ -14,7 +14,8 @@ Alkalmazások Fejlesztése Beadandó - MiniNeptun
 * Felhasználóként lehet módosítani ,hogy az adott tárgyból melyik órát szeretné felvenni.
 * Adminisztrátorként lehet tárgyakat törölni és hozzáadni.
 * Adminisztrátorként lehet Felhasználók által felvett tárgyakat törölni a felhasználótól.
-##Nem funkcionális követelmények:
+
+## Nem funkcionális követelmények:
 * Könnyen átlátható és kezelhető felület.
 * Ergonómikus elrendezés.
 * Gyors működés.
