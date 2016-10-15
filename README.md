@@ -31,7 +31,7 @@ Alkalmazások Fejlesztése Beadandó - MiniNeptun
 
 ## Használati Esetek:
 
-![UseCase](https://SecterHD.github.com/uml/UseCaseDiagram2.png)
+![UseCase](https://SecterHD.github.com/MiniNeptun/uml/UseCaseDiagram2.png)
 
 ## Példa egy folyamatra:
 Felhasználóként egy tárgyra való jelentkezés:
@@ -42,6 +42,6 @@ Felhasználóként egy tárgyra való jelentkezés:
 * Vagy végez a tárgyfelvétellel vagy felveszi a többi tárgyát is
 * Kijelentkezik 
 
-![Folyamat](https://SecterHD.github.com/uml/nomnoml (1).png)
+![Folyamat](https://SecterHD.github.com/MiniNeptun/uml/nomnoml (1).png)
 
 
