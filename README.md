@@ -44,4 +44,24 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 ![Folyamat](https://SecterHD.github.com/MiniNeptun/uml/nomnoml (1).png)
 
+## Oldaltérkép
+
+* Publikus:
+  *Főoldal
+  *Tárgyak böngészése
+  *Bejelentkezés
+  *Regisztráció
+* Felhasználó:
+  *Kilépés
+  *Saját profil
+    *Tárgy leadása
+    *Óra módosítása
+  *Tárgyak böngészése
+    *Tárgy felvétele
+* Adminisztrátor:
+  *Új tárgy felvétele
+  *Tárgyak böngészése
+    *Tárgy törlése
+  *Felhasználók böngészése
+    *Felhasználó lejelentkeztetése
 
