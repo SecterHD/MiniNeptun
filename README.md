@@ -44,7 +44,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 ![Folyamat](https://github.com/SecterHD/MiniNeptun/blob/master/uml/nomnoml (1).png)
 
-## Oldaltérkép
+## Oldaltérkép:
 
 - Publikus:
   - Főoldal
@@ -85,5 +85,14 @@ Felhasználóként egy tárgyra való jelentkezés:
 * GET/subjects/delete=id: tárgy törlése
 * GET/users: felhasználók listája
 * GET/users/delete=id: felhasználó lejelentkeztetése egy tárgyról
+
+## Osztálymodell:
+
+![Folyamat](https://github.com/SecterHD/MiniNeptun/blob/master/uml/nomnoml (3).png)
+
+## Oldalvázlatok:
+
+![Folyamat](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/nomnoml (1).png)
+
 
 
