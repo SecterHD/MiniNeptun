@@ -31,4 +31,17 @@ Alkalmazások Fejlesztése Beadandó - MiniNeptun
 
 ## Használati Esetek:
 
+![UseCase](https://SecterHD.github.com/uml/UseCaseDiagram2.png)
+
+## Példa egy folyamatra:
+Felhasználóként egy tárgyra való jelentkezés:
+
+* A felhasználó a főoldalra érkezve bejelentkezik
+* Megkeresi a felvenni kívánt kurzust
+* Ha tudja elveszi, ha nem új kurzust keres
+* Vagy végez a tárgyfelvétellel vagy felveszi a többi tárgyát is
+* Kijelentkezik 
+
+![Folyamat](https://SecterHD.github.com/uml/nomnoml (1).png)
+
 
