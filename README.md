@@ -31,7 +31,7 @@ Alkalmazások Fejlesztése Beadandó - MiniNeptun
 
 ## Használati Esetek:
 
-![UseCase](https://SecterHD.github.com/MiniNeptun/uml/UseCaseDiagram2.png)
+![UseCase](https://github.com/SecterHD/MiniNeptun/blob/master/uml/UseCaseDiagram2.png)
 
 ## Példa egy folyamatra:
 Felhasználóként egy tárgyra való jelentkezés:
