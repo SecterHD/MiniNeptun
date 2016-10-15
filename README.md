@@ -3,22 +3,22 @@ Alkalmazások Fejlesztése Beadandó - MiniNeptun
 
 #Mini Neptun
 ##Funkcionális követelmények:
-*Vendégként főoldalon láthatók a kiemelt kötelező tárgyak ,melyeket elvégzendő félév szerint lehet kategóriákba szedni.
-*Vendégként lehet böngészni a tárgyak között.
-*Vendégként lehet látni a tárgy leírását,oktatót, és a választható időpontokat.
-*Vendégként lehet keresni az oldalon a tárgyak között
-*Vendégként lehet regisztrálni az oldalon.
-*Felhasználóként be lehet jelentkezni az oldalra.
-*Felhasználóként a saját profilt lehet szerkeszteni.
-*Felhasználóként lehet tárgyakat felvenni és leadni.
-*Felhasználóként lehet módosítani ,hogy az adott tárgyból melyik órát szeretné felvenni.
-*Adminisztrátorként lehet tárgyakat törölni és hozzáadni.
-*Adminisztrátorként lehet Felhasználók által felvett tárgyakat törölni a felhasználótól.
+* Vendégként főoldalon láthatók a kiemelt kötelező tárgyak ,melyeket elvégzendő félév szerint lehet kategóriákba szedni.
+* Vendégként lehet böngészni a tárgyak között.
+* Vendégként lehet látni a tárgy leírását,oktatót, és a választható időpontokat.
+* Vendégként lehet keresni az oldalon a tárgyak között
+* Vendégként lehet regisztrálni az oldalon.
+* Felhasználóként be lehet jelentkezni az oldalra.
+* Felhasználóként a saját profilt lehet szerkeszteni.
+* Felhasználóként lehet tárgyakat felvenni és leadni.
+* Felhasználóként lehet módosítani ,hogy az adott tárgyból melyik órát szeretné felvenni.
+* Adminisztrátorként lehet tárgyakat törölni és hozzáadni.
+* Adminisztrátorként lehet Felhasználók által felvett tárgyakat törölni a felhasználótól.
 ##Nem funkcionális követelmények:
-*Könnyen átlátható és kezelhető felület.
-*Ergonómikus elrendezés.
-*Gyors működés.
-*Biztonságos működés:Jelszavak elrejtése,funkciók hozzáférésehez való helyes kezelés.
+* Könnyen átlátható és kezelhető felület.
+* Ergonómikus elrendezés.
+* Gyors működés.
+* Biztonságos működés:Jelszavak elrejtése,funkciók hozzáférésehez való helyes kezelés.
 Szakterületi fogalomjegyzék:
 Tárgy:  A rendszeben a hallgató által felvehető tantárgy.
 Oktató: Olyan tanár,aki az óra megtartásáért,és a tananyag leadásáért felel.
