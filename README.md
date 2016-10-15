@@ -42,7 +42,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 * Vagy végez a tárgyfelvétellel vagy felveszi a többi tárgyát is
 * Kijelentkezik 
 
-![Folyamat](https://SecterHD.github.com/MiniNeptun/uml/nomnoml (1).png)
+![Folyamat](https://github.com/SecterHD/MiniNeptun/blob/master/uml/nomnoml (1).png)
 
 ## Oldaltérkép
 
