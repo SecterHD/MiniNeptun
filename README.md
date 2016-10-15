@@ -46,18 +46,18 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 ## Oldaltérkép
 
-* Publikus:
-*  Főoldal
-*  Tárgyak böngészése
-*  Bejelentkezés
-*  Regisztráció
-* Felhasználó:
-  *Kilépés
-  *Saját profil
-    *Tárgy leadása
-    *Óra módosítása
-  *Tárgyak böngészése
-    *Tárgy felvétele
+- Publikus:
+  -Főoldal
+  -Tárgyak böngészése
+  -Bejelentkezés
+  -Regisztráció
+- Felhasználó:
+  -Kilépés
+  -Saját profil
+    -Tárgy leadása
+    -Óra módosítása
+  -Tárgyak böngészése
+    -Tárgy felvétele
 * Adminisztrátor:
 *Új tárgy felvétele
   *Tárgyak böngészése
