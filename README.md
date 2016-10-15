@@ -93,7 +93,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 ## Oldalvázlatok:
 
 ![login](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 1.png)
-![reg](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 1 copy.png)
+![reg](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 1 copy (Alternate 883g).png)
 ![subjects](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 2.png)
 ![orak](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3.png)
 ![profil](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3 copy.png)
