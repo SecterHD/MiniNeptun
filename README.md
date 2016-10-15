@@ -64,4 +64,26 @@ Felhasználóként egy tárgyra való jelentkezés:
     - Tárgy törlése
   - Felhasználók böngészése
     - Felhasználó lejelentkeztetése
+    
+## Végpontok:
+* GET/: főoldal
+* GET/login: bejelentkező oldal
+* POST/login: bejelentkező adatok felküldése
+* GET/login/signup: regisztrációs oldal
+* POST/login/signup: regisztrációs adatok felküldése
+* GET/logout: kijelentkező oldal
+* GET/subjects: tárgylista oldal
+* GET/subjects/add: tárgy felvétele,óra kiválasztása
+* POST/subjects/add: tárgy felvétele,adatok felküldés
+* GET/profile: profil oldal
+* GET/profile/ id: tárgy adatai
+* GET/profile/delete=id: tárgy leadása
+* GET/profile/edit=id: óra módosítás
+* POST/profile/edit=id: óra módosítás,adatok felküldése
+* GET/subjects/new: új tárgy felvétele
+* POST/subjects/new: új tárgy felvétele,adatok felküldése
+* GET/subjects/delete=id: tárgy törlése
+* GET/users: felhasználók listája
+* GET/users/delete=id: felhasználó lejelentkeztetése egy tárgyról
+
 
