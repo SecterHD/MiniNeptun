@@ -2,16 +2,14 @@
 Alkalmazások Fejlesztése Beadandó - MiniNeptun
 
 ## Funkcionális követelmények:
-* Vendégként főoldalon láthatók a kiemelt kötelező tárgyak ,melyeket elvégzendő félév szerint lehet kategóriákba szedni.
 * Vendégként lehet böngészni a tárgyak között.
-* Vendégként lehet látni a tárgy leírását,oktatót, és a választható időpontokat.
-* Vendégként lehet keresni az oldalon a tárgyak között
 * Vendégként lehet regisztrálni az oldalon.
 * Felhasználóként be lehet jelentkezni az oldalra.
-* Felhasználóként a saját profilt lehet szerkeszteni.
 * Felhasználóként lehet tárgyakat felvenni és leadni.
-* Felhasználóként lehet módosítani ,hogy az adott tárgyból melyik órát szeretné felvenni.
+* Felhasználóként lehet módosítani ,hogy az adott tárgyból melyik kurzust szeretné felvenni.
 * Adminisztrátorként lehet tárgyakat törölni és hozzáadni.
+* Adminisztrátorként lehet új kurzust hozzáadni,módosítani és törölni.
+* Adminisztrátorként lehet Felhasználót törölni.
 * Adminisztrátorként lehet Felhasználók által felvett tárgyakat törölni a felhasználótól.
 
 ## Nem funkcionális követelmények:
@@ -23,11 +21,12 @@ Alkalmazások Fejlesztése Beadandó - MiniNeptun
 ## Szakterületi fogalomjegyzék:
 * Tárgy:  A rendszeben a hallgató által felvehető tantárgy.
 * Oktató: Olyan tanár,aki az óra megtartásáért,és a tananyag leadásáért felel.
+* Kurzus: Egy tárgyból több kurzus is indul különböző időpontokban,így a hallgató kiválaszthaja a neki legmegfelelőbbet.
 
 ## Szerepkörök:
-* Vendég: Tárgyak keresését,böngészését és megtekintését végezheti el.
+* Vendég: Tárgyak böngészését és megtekintését végezheti el.
 * Felhasználó: A vendég szerepkörén túl képes a megadott tárgyakból az általa kiválasztottakat felvenni vagy leadni,továbbá módosíthatja melyik órára szeretne járni a tárgyon belül.
-* Adminisztrátor: Felhasználó szerepkörén túl képes tárgyakat hozzáadni és törölni a tárgylistából.Tobábbá a felhasználók által felvett tárgyakról képes lejelentkeztetni a felhasználót.
+* Adminisztrátor: Felhasználó szerepkörén túl képes tárgyakat hozzáadni és törölni a tárgylistából.Tobábbá a felhasználók által felvett tárgyakról képes lejelentkeztetni a felhasználót.Ezenkívül képes még Kurzusokat létrehozni,módosítani és törölni,plusz felhasználókat törölni.
 
 ## Használati Esetek:
 
@@ -47,44 +46,51 @@ Felhasználóként egy tárgyra való jelentkezés:
 ## Oldaltérkép:
 
 - Publikus:
-  - Főoldal
-  - Tárgyak böngészése
   - Bejelentkezés
+  - Tárgyak böngészése
   - Regisztráció
 - Felhasználó:
   - Kilépés
   - Saját profil
     - Tárgy leadása
-    - Óra módosítása
-  - Tárgyak böngészése
+  - Tárgylista böngészése
+    - Kurzus módosítása
     - Tárgy felvétele
 - Adminisztrátor:
   - Új tárgy felvétele
-  - Tárgyak böngészése
-    - Tárgy törlése
+  - Új kurzus felvétele
+  - Tárgyak törlése
+  - Tárgylista böngészése
+    - Kurzus módosítása
+    - Kurzus törlése
   - Felhasználók böngészése
-    - Felhasználó lejelentkeztetése
+    - Felhasználó kurzusainak megtekintése
+      - Felhasználó adott kurzusról való lejelentkeztetése
+    - Felhasználó törlése
     
 ## Végpontok:
-* GET/: főoldal
-* GET/login: bejelentkező oldal
-* POST/login: bejelentkező adatok felküldése
-* GET/login/signup: regisztrációs oldal
-* POST/login/signup: regisztrációs adatok felküldése
+* GET/: bejelentkező oldal
+* POST/: bejelentkező adatok felküldése
+* GET/signup: regisztrációs oldal
+* POST/signup: regisztrációs adatok felküldése
 * GET/logout: kijelentkező oldal
-* GET/subjects: tárgylista oldal
-* GET/subjects/add: tárgy felvétele,óra kiválasztása
-* POST/subjects/add: tárgy felvétele,adatok felküldés
+* GET/lectures: tárgylista oldal
+* GET/lectures/addLecture: tárgy felvétele
+* POST/lectures/addLecture: tárgy felvétele,adatok felküldés
+* GET/lectures/addCourse: kurzus felvétele felvétele
+* POST/lectures/addCourse: tárgy felvétele,adatok felküldés
+* GET/lectures/deleteLecture: tárgyak listája,kiválasztás törléshez
+* POST/lectures/deleteLecture/:id: tárgy törlése
+* GET/lectures/:id/edit: kurzus módosítása
+* POST/lectures/:id/edit: kurzus módositása,adatok felküldés
+* POST/lectures/:id/join: kurzus felvétele
+* POST/lectures/:id/delete: kurzus törlése
 * GET/profile: profil oldal
-* GET/profile/ id: tárgy adatai
-* GET/profile/delete=id: tárgy leadása
-* GET/profile/edit=id: óra módosítás
-* POST/profile/edit=id: óra módosítás,adatok felküldése
-* GET/subjects/new: új tárgy felvétele
-* POST/subjects/new: új tárgy felvétele,adatok felküldése
-* GET/subjects/delete=id: tárgy törlése
-* GET/users: felhasználók listája
-* GET/users/delete=id: felhasználó lejelentkeztetése egy tárgyról
+* POST/profile/:id/delete: tárgy leadása
+* GET/students: felhasználók listája
+* POST/students/:id/deleteStrudent: felhasználó törlése
+* GET/students/:id/showCourses: adott felhasználó kurzusainak megjelenítése
+* POST/students/:id/deleteJoin: felhasználó adott kurzusról való lejelentkeztetése
 
 ## Osztálymodell:
 
