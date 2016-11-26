@@ -98,12 +98,16 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 ## Oldalvázlatok:
 
-![login](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 1.png)
-![reg](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 1 copy (Alternate 883g).png)
-![subjects](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 2.png)
-![orak](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3.png)
-![profil](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3 copy.png)
-![users](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/New Mockup 3 copy 2.png)
+![login](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/login.png)
+![reg](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/register.png)
+![courses](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/courses.png)
+![lectures](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/lectures.png)
+![profile](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/profile.png)
+![students](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/students.png)
+![newLecture](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/newLecture.png)
+![newCourse](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/newCourse.png)
+![editCourse](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/editCourse.png)
+
 
 
 
