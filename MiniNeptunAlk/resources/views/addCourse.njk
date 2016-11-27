@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+{% if old('errors') %}
+<div class="alert alert-dismissible alert-danger">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <p>Hibás adatok!</p>
+  <p>{{ old('errors')[0].message }}</p>
+</div>
+{% endif %}
+{% if old('success') %}
+<div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <p>Sikeres adatbevitel!</p>
+  <p>{{ old('success')[0].message }}</p>
+</div>
+{% endif %}
+<form class="form-horizontal" method="POST">
+    {{ csrfField }}
+  <fieldset>
+    <legend>Új kurzus felvétele</legend>
+    <div class="form-group">
+      <label for="teacher" class="col-lg-2 control-label">Oktató neve</label>
+      <div class="col-lg-4">
+        <input type="input" class="form-control" id="teacher" name="teacher" value="{{ old('teacher') }}" placeholder="Oktató">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="capacity" class="col-lg-2 control-label">Férőhely</label>
+      <div class="col-lg-4">
+        <input type="number" min="5" class="form-control" id="capacity" name="capacity" value="{{ old('capacity') }}" placeholder="Férőhely">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lecture" class="col-lg-2 control-label">Tárgy</label>
+      <div class="col-lg-4">
+        <select class="form-control" id="lecture" name="lecture_id">
+        {% for lecture in lectures %}
+        <option {{'selected' if old('lecture_id') == lecture.id}} value="{{ lecture.id }}">{{ lecture.lecturename }}</option>
+        {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-4 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary">Felvétel</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+{% endblock %}

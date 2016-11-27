@@ -1,0 +1,66 @@
+{% extends "layout.njk" %}
+{% block content %}
+{% if old('success') %}
+<div class="alert alert-dismissible alert-success">
+   <button type="button" class="close" data-dismiss="alert">&times;</button>
+   <p>Siker!</p>
+   <p>{{ old('success')[0].message }}</p>
+</div>
+{% endif %}
+{% if old('errors') %}
+<div class="alert alert-dismissible alert-danger">
+   <button type="button" class="close" data-dismiss="alert">&times;</button>
+   <p>Hiba!</p>
+   <p>{{ old('errors')[0].message }}</p>
+</div>
+{% endif %}
+<legend>Tárgylista</legend>
+<table class="table table-striped table-hover ">
+   <thead>
+      <tr>
+         <th>Csoport</th>
+         <th>Tárgy Neve</th>
+         <th>Oktató</th>
+         <th>Aktuális Létszám</th>
+         <th>Max Létszám</th>
+         <th>Felvesz</th>
+         <th>Módosít</th>
+         <th>Törlés</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for data in dataArray %}
+      <tr>
+         <td>{{data.id}}</td>
+         <td>{{data.lecturename}}</td>
+         <td>{{data.teacher_name}}</td>
+         <td>{% for actualNum in actual %}
+            {% if actualNum.course_id == data.id %}
+            {{ actualNum.count }}
+            {% endif %}
+            {% endfor %}
+         </td>
+         <td>{{data.capacity}}</td>
+         <td>
+            <form action = "/lectures/{{ data.id }}/join" method="POST">
+               {{ csrfField }}
+               <input {{'disabled' if currentUser.isAdmin != 0 }} type="submit" class="btn btn-success btn-sm" value="Felvesz"/>
+            </form>
+         </td>
+         <td>
+            <form action = "/lectures/{{ data.id }}/edit">
+               {{ csrfField }}
+               <input {{'disabled' if currentUser.isAdmin != 1 }} type="submit" class="btn btn-default btn-sm" value="Módosít"/>
+            </form>
+         </td>
+         <td>
+            <form action = "/lectures/{{ data.id }}/delete" method="POST">
+               {{ csrfField }}
+               <input {{'disabled' if currentUser.isAdmin!=1 }} type="submit" class="btn btn-danger btn-sm" value="Törlés"/>
+            </form>
+         </td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+{% endblock %}

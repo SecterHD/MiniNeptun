@@ -1,0 +1,44 @@
+{% extends "layout.njk" %}
+{% block content %}
+<legend>Hallgatók</legend>
+<table class="table table-striped table-hover ">
+   <thead>
+      <tr>
+         <th>Név</th>
+         <th>Neptun kód</th>
+         <th>Felvett kurzusok száma</th>
+         <th>Kurzusai</th>
+         <th>Diák törlése</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for user in users %}
+      {%if user.isAdmin==0%}
+      <tr>
+         <td>{{user.lastname}} {{user.firstname}}</td>
+         <td>{{user.ncode}}</td>
+         <td>
+            {%for actualJoinNumber in joinNumber%}
+            {%if actualJoinNumber.user_id==user.id%}
+            {{actualJoinNumber.count}}
+            {%endif%}
+            {%endfor%}
+         </td>
+         <td>
+            <form action = "/students/{{ user.id }}/showCourses">
+               {{ csrfField }}
+               <input type="submit" class="btn btn-default btn-sm" value="Mutat"/>
+            </form>
+         </td>
+         <td>
+            <form action = "/students/{{ user.id }}/deleteStudent" method="POST">
+               {{ csrfField }}
+               <input type="submit" class="btn btn-danger btn-sm" value="Törlés"/>
+            </form>
+         </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+   </tbody>
+</table>
+{% endblock %}

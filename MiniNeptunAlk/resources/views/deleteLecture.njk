@@ -1,0 +1,25 @@
+{% extends "layout.njk" %}
+{% block content %}
+<legend>Tárgyak</legend>
+<table class="table table-striped table-hover ">
+   <thead>
+      <tr>
+         <th>Tárgy neve</th>
+         <th>Törlés</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for lecture in lectures %}
+      <tr>
+         <td>{{lecture.lecturename}}</td>
+         <td>
+            <form action = "/lectures/deleteLecture/{{lecture.id}}" method="POST">
+               {{ csrfField }}
+               <input type="submit" class="btn btn-danger btn-sm" value="Törlés"/>
+            </form>
+         </td>
+      </tr>
+      {% endfor %}   
+   </tbody>
+</table>
+{% endblock %}

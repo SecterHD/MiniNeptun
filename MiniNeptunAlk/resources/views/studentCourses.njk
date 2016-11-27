@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+{% block content %}
+{% if old('success') %}
+<div class="alert alert-dismissible alert-success">
+   <button type="button" class="close" data-dismiss="alert">&times;</button>
+   <p>Siker!</p>
+   <p>{{ old('success')[0].message }}</p>
+</div>
+{% endif %}
+{% if old('errors') %}
+<div class="alert alert-dismissible alert-danger">
+   <button type="button" class="close" data-dismiss="alert">&times;</button>
+   <p>Hiba!</p>
+   <p>{{ old('errors')[0].message }}</p>
+</div>
+{% endif %}
+<legend>Tárgylista</legend>
+<table class="table table-striped table-hover ">
+   <thead>
+      <tr>
+         <th>Csoport</th>
+         <th>Tárgy Neve</th>
+         <th>Oktató</th>
+         <th>Aktuális Létszám</th>
+         <th>Max Létszám</th>
+         <th>Lejelentkeztet</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for data in dataArray %}
+      <tr>
+         <td>{{data.course_id}}</td>
+         <td>{{data.lecturename}}</td>
+         <td>{{data.teacher_name}}</td>
+         <td>{% for actualNum in actual %}
+            {% if actualNum.course_id == data.course_id %}
+            {{ actualNum.count }}
+            {% endif %}
+            {% endfor %}
+         </td>
+         <td>{{data.capacity}}</td>
+         <td>
+            <form action = "/students/{{ data.id }}/deleteJoin" method="POST">
+               {{ csrfField }}
+               <input type="submit" class="btn btn-danger btn-sm" value="Lejelentkeztet"/>
+            </form>
+         </td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+{% endblock %}
