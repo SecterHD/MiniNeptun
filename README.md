@@ -108,6 +108,13 @@ Felhasználóként egy tárgyra való jelentkezés:
 ![newCourse](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/newCourse.png)
 ![editCourse](https://github.com/SecterHD/MiniNeptun/blob/master/drotvaz/editCourse.png)
 
+## Plusz info:
+
+* Egy darab admin user van,amit az oldal indulásakor lehet létrehozni. Jelenlegi állapotban az admin Neptun kódja:admin,jelszava:admin.
+* Jelenleg a teszteléshez 7 diák lett létrehozva,melyeknek adatai:
+- NKódok:teszt1,teszt2,teszt3,teszt4,teszt5,teszt6,teszt7.
+- Jelszavak:asd1,asd2,asd,asd,asd,asd,asd.
+
 
 
 
