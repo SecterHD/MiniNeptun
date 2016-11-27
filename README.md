@@ -37,7 +37,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 * A felhasználó a főoldalra érkezve bejelentkezik
 * Megkeresi a felvenni kívánt kurzust
-* Ha tudja elveszi, ha nem új kurzust keres
+* Ha tudja felveszi, ha nem új kurzust keres
 * Vagy végez a tárgyfelvétellel vagy felveszi a többi tárgyát is
 * Kijelentkezik 
 
@@ -80,7 +80,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 * GET/lectures/addCourse: kurzus felvétele felvétele
 * POST/lectures/addCourse: tárgy felvétele,adatok felküldés
 * GET/lectures/deleteLecture: tárgyak listája,kiválasztás törléshez
-* POST/lectures/deleteLecture/:id: tárgy törlése
+* POST/lectures/deleteLecture/:id : tárgy törlése
 * GET/lectures/:id/edit: kurzus módosítása
 * POST/lectures/:id/edit: kurzus módositása,adatok felküldés
 * POST/lectures/:id/join: kurzus felvétele
