@@ -147,7 +147,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 * Az alkalmazás a Selenium IDE segítségével lesz tesztelve.
 * Ez egy firefoxra telepíthető bővítmény, melyet ingyenesen le lehet tölteni innen: https://addons.mozilla.org/hu/firefox/addon/selenium-ide/
 * Telepítés után CTRL+ALT+S billentyűkombinációval előhozható a felhasználói felület.
-* A Selenium IDE-vel végzett tesztesetek a /tesztek mappában találhatóak.
+* A Selenium IDE-vel végzett tesztesetek itt találhatóak: https://github.com/SecterHD/MiniNeptun/blob/master/tesztek
 
 
 
