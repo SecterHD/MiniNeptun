@@ -1,5 +1,7 @@
 {% extends "layout.njk" %}
-
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+{% endblock %}
 {% block content %}
 {% if old('errors') %}
 <div class="alert alert-dismissible alert-danger">
@@ -15,23 +17,27 @@
   <p>{{ old('success')[0].message }}</p>
 </div>
 {% endif %}
-<form class="form-horizontal" method="POST">
+<form class="form-horizontal" method="POST" role="form" data-toggle="validator">
     {{ csrfField }}
   <fieldset>
     <legend>Új kurzus felvétele</legend>
-    <div class="form-group">
+    <div class="form-group has-feedback">
       <label for="teacher" class="col-lg-2 control-label">Oktató neve</label>
       <div class="col-lg-4">
-        <input type="input" class="form-control" id="teacher" name="teacher" value="{{ old('teacher') }}" placeholder="Oktató">
+        <input required type="input" class="form-control" id="teacher" name="teacher" value="{{ old('teacher') }}" placeholder="Oktató">
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group has-feedback">
       <label for="capacity" class="col-lg-2 control-label">Férőhely</label>
       <div class="col-lg-4">
-        <input type="number" min="5" class="form-control" id="capacity" name="capacity" value="{{ old('capacity') }}" placeholder="Férőhely">
+        <input required type="number" min="5" class="form-control" id="capacity" name="capacity" value="{{ old('capacity') }}" placeholder="Férőhely">
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group has-feedback">
       <label for="lecture" class="col-lg-2 control-label">Tárgy</label>
       <div class="col-lg-4">
         <select class="form-control" id="lecture" name="lecture_id">
@@ -39,9 +45,11 @@
         <option {{'selected' if old('lecture_id') == lecture.id}} value="{{ lecture.id }}">{{ lecture.lecturename }}</option>
         {% endfor %}
         </select>
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group has-feedback">
       <div class="col-lg-4 col-lg-offset-2">
         <button type="submit" class="btn btn-primary">Felvétel</button>
       </div>
@@ -50,3 +58,4 @@
 </form>
 
 {% endblock %}
+

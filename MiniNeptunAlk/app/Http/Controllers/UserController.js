@@ -7,12 +7,12 @@ const Validator = use('Validator');
 class UserController {
 
     *
-    login(request, response) {
+        login(request, response) {
         yield response.sendView('login');
     }
 
     *
-    loginSubmit(request, response) {
+        loginSubmit(request, response) {
         var post = request.post();
         try {
             const user = yield User.findBy('ncode', post.ncode);
@@ -35,13 +35,13 @@ class UserController {
     }
 
     *
-    logout(request, response) {
+        logout(request, response) {
         yield request.auth.logout();
         response.redirect('/')
     }
 
     *
-    register(request, response) {
+        register(request, response) {
         const admin = yield User.query().where('isAdmin', true);
         var isAdminAlive = false;
         if (admin[0] != null) {
@@ -53,7 +53,7 @@ class UserController {
     }
 
     *
-    registerSubmit(request, response) {
+        registerSubmit(request, response) {
         var post = request.post();
         if (post.isAdmin == "Ki" || post.isAdmin == null) {
             var user_data = {
@@ -93,6 +93,7 @@ class UserController {
         yield user.save();
         yield response.redirect('/');
     }
+
 }
 
 module.exports = UserController

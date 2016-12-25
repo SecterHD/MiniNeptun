@@ -157,7 +157,7 @@ class SubmitController {
             yield request
                 .with({
                     errors: [{
-                        message: 'Már létezik ilyen nevű tárgy,vagy nem töltötte ki a mezőt!'
+                        message: 'Már létezik ilyen nevű tárgy!'
                     }]
                 })
                 .flash()
@@ -168,7 +168,85 @@ class SubmitController {
 
         var lecture = yield Lecture.create(lectureData);
         yield lecture.save();
+        yield request
+            .with({
+                success: [{
+                    message: 'Új tárgy sikeresen felvéve!'
+                }]
+            })
+            .flash()
         yield response.redirect('/lectures');
+    }
+
+    *
+    ajaxAddLectureSubmit(request, response) {
+        var post = request.post();
+        var lectureData = {
+            lecturename: post.name
+        };
+
+        const validation = yield Validator.validateAll(lectureData, Lecture.rules)
+
+        if (validation.fails()) {
+            yield request
+                .with({
+                    errors: [{
+                        message: 'Már létezik ilyen nevű tárgy!'
+                    }]
+                })
+                .flash()
+
+            response.send({ success: false });
+            return
+        }
+
+        var lecture = yield Lecture.create(lectureData);
+        yield lecture.save();
+        yield request
+            .with({
+                success: [{
+                    message: 'Új tárgy sikeresen felvéve!'
+                }]
+            })
+            .flash()
+        response.send({ success: true });
+    }
+
+    *
+    ajaxAddCourseSubmit(request, response) {
+        var post = request.post();
+        var courseData = {
+            teacher_name: post.teacher,
+            capacity: post.capacity,
+            lecture_id: post.lecture_id
+        };
+
+        const validation = yield Validator.validateAll(courseData, Course.rules)
+
+        if (validation.fails()) {
+            yield request
+                .with({
+                    errors: [{
+                        message: 'Nem adta meg a férőhelyek számát,vagy a tanár nevét!'
+                    }]
+                })
+                .flash()
+
+            response.send({ success: false });
+            return
+        }
+
+        var course = yield Course.create(courseData);
+
+        yield course.save();
+        yield request
+            .with({
+                success: [{
+                    message: 'Sikeresen elindult az új kurzus!'
+                }]
+            })
+            .flash()
+        response.send({ success: true });
     }
 }
 

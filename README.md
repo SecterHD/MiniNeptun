@@ -115,8 +115,41 @@ Felhasználóként egy tárgyra való jelentkezés:
 - NKódok:teszt1,teszt2,teszt3,teszt4,teszt5,teszt6,teszt7.
 - Jelszavak:asd1,asd2,asd,asd,asd,asd,asd.
 
+## Javascript funkciók:
+* Aktuális idő mutatása
+* Megerősítő ablak felugrása bármely törlés esetén
+* Felugró ablak Tárgy felvételénél
+* Felugró ablak Kurzus felvételénél
+* Űrlapvalidáció
 
+## Aktuális idő mutatása
+* Használt fájlok: clock.js, layout.njk
+* Működése: Amikor a layout.njk betöltődik,a body-jába egyből meghívódik a clock.js startTime() metódusa,ami beleírja a clock id-val rendelkező paragrafusba az aktuális időt.
 
+## Megerősítő ablak felugrása bármely törlés esetén
+* Használt fájlok: delete.js, routes.js, DeleteController.js, deleteLecture.njk, lectures.njk, profile.njk, studentCourses.njk, students.njk
+* Működése: Amikor olyan műveletet hajtunk végre,ami törölni fog adatot az adatbázisból,akkor felugrik egy moduláris ablak,amiben meg kell erősítenünk a döntést.
+* Amikor rákattintunk a törlés gombra,a delete.js megakadályozza az alapvető funkciót,és egy moduláris ablakban megkérdezi ,hogy biztosan szeretnénk-e hogy végrehejtódjon a törlés.
+* Ha a nemre kattintunk,nem történik semmi,ha az OK-ra,akkor ajax hívás segítségével törli az adott adatot.
+
+## Felugró ablak Tárgy felvételénél
+* Használt fájlok: addLecture_popup.js, routes.js, SubmitController.js lectures.njk, addLecture.njk
+* Működése: Amikor az Új tárgy felvételére kattintunk,az addLecture_popup.js megakadályozza az alap funkciót,és egy moduláris ablakban,ajax hívással betölti az addLecture.njk formját.
+
+## Felugró ablak Kurzus felvételénél
+* Használt fájlok: addCourse_popup.js, routes.js, SubmitController.js lectures.njk, addCourse.njk
+* Működése: Amikor az Új kurzus felvételére kattintunk,az addCourse_popup.js megakadályozza az alap funkciót,és egy moduláris ablakban,ajax hívással betölti az addCourse.njk formját.
+
+## Űrlapvalidáció
+* Használt fájlok: register.njk, https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js
+* Működése: A regisztrációs oldalon,a fromban szereplő mezőket ellenőrzi a validator.min.js,és addig nem enged regisztrálni amíg az adatok nincsenek helyesen kitöltve.
+* Továbbá visszajelzést küld a felhasználónak ha egy adat jól,vagy rosszul van kitöltve.
+
+## Tesztek
+* Az alkalmazás a Selenium IDE segítségével lesz tesztelve.
+* Ez egy firefoxra telepíthető bővítmény, melyet ingyenesen le lehet tölteni innen: https://addons.mozilla.org/hu/firefox/addon/selenium-ide/
+* Telepítés után CTRL+ALT+S billentyűkombinációval előhozható a felhasználói felület.
+* A Selenium IDE-vel végzett tesztesetek a /tesztek mappában találhatóak.
 
 
 

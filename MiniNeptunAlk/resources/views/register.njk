@@ -26,30 +26,34 @@
             <p>{{ old('errors')[0].message }}</p>
          </div>
          {% endif %}
-         <form class="form-horizontal" method="POST">
+         <form class="form-horizontal" method="POST" role="form" data-toggle="validator">
             {{ csrfField }}
             <fieldset>
                <legend>Regisztráció</legend>
-               <div class="form-group">
+               <div class="form-group has-feedback">
                   <label for="inputNCode" class="col-lg-2 control-label">Neptun Kód</label>
                   <div class="col-lg-4">
-                     <input type="text" class="form-control" id="inputNCode" name="ncode" value="{{ old('ncode') }}" placeholder="Neptun Kód">
+                     <input required type="text" class="form-control" id="inputNCode" name="ncode" value="{{ old('ncode') }}" placeholder="Neptun Kód">
                   </div>
                </div>
-               <div class="form-group">
+               <div class="form-group has-feedback">
                   <label for="inputFN" class="col-lg-2 control-label">Keresztnév</label>
                   <div class="col-lg-4">
-                     <input type="text" class="form-control" id="inputFN" name="FN" value="{{ old('FN') }}" placeholder="Keresztnév">
+                     <input required type="text" class="form-control" id="inputFN" name="FN" value="{{ old('FN') }}" placeholder="Keresztnév">
+                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
                   </div>
                </div>
-               <div class="form-group">
+               <div class="form-group has-feedback">
                   <label for="inputLN" class="col-lg-2 control-label">Vezetéknév</label>
                   <div class="col-lg-4">
-                     <input type="text" class="form-control" id="inputLN" name="LN" value="{{ old('LN') }}" placeholder="Vezetéknév">
+                     <input required type="text" class="form-control" id="inputLN" name="LN" value="{{ old('LN') }}" placeholder="Vezetéknév">
+                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
                   </div>
                </div>
                {%if isAdminAlive==false%}
-               <div class="form-group">
+               <div class="form-group has-feedback">
                   <label for="inputIsAdmin" class="col-lg-2 control-label">Admin funkciók</label>
                   <div class="col-lg-4">
                      <select class="form-control" id="inputIsAdmin" name="isAdmin">
@@ -59,13 +63,15 @@
                   </div>
                </div>
                {%endif%}
-               <div class="form-group">
+               <div class="form-group has-feedback">
                   <label for="inputPassword" class="col-lg-2 control-label">Jelszó</label>
                   <div class="col-lg-4">
-                     <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Jelszó">
+                     <input required type="password" class="form-control" id="inputPassword" name="password" placeholder="Jelszó">
+                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
                   </div>
                </div>
-               <div class="form-group">
+               <div class="form-group has-feedback">
                   <div class="col-lg-4 col-lg-offset-2">
                      <a class="btn btn-primary" href="/" role="button">Vissza</a>
                      <button type="submit" class="btn btn-primary">Regisztráció</button>
@@ -78,5 +84,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
    </body>
 </html>

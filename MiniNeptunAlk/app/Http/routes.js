@@ -44,4 +44,12 @@ Route.post('/students/:id/deleteJoin', 'DeleteController.deleteJoin').middleware
 Route.post('/students/:id/deleteStudent', 'DeleteController.deleteStudent').middleware('auth');
 Route.post('/lectures/:id/delete', 'DeleteController.deleteCourse').middleware('auth');
 
-
+Route.group('ajax', function (e) {
+    Route.post('/addLecture', 'SubmitController.ajaxAddLectureSubmit');
+    Route.post('/addCourse', 'SubmitController.ajaxAddCourseSubmit');
+    Route.delete('/lectures/deleteLecture/:id', 'DeleteController.ajaxDeleteLectureSubmit').middleware('auth');
+    Route.delete('/profile/:id/delete', 'DeleteController.ajaxDeleteJoin').middleware('auth');
+    Route.delete('/students/:id/deleteJoin', 'DeleteController.ajaxDeleteJoin').middleware('auth');
+    Route.delete('/students/:id/deleteStudent', 'DeleteController.ajaxDeleteStudent').middleware('auth');
+    Route.delete('/lectures/:id/delete', 'DeleteController.ajaxDeleteCourse').middleware('auth');
+}).prefix('/ajax')
