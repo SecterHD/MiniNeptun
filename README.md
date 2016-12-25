@@ -128,9 +128,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 ## Megerősítő ablak felugrása bármely törlés esetén
 * Használt fájlok: delete.js, routes.js, DeleteController.js, deleteLecture.njk, lectures.njk, profile.njk, studentCourses.njk, students.njk
-* Működése: Amikor olyan műveletet hajtunk végre,ami törölni fog adatot az adatbázisból,akkor felugrik egy moduláris ablak,amiben meg kell erősítenünk a döntést.
-* Amikor rákattintunk a törlés gombra,a delete.js megakadályozza az alapvető funkciót,és egy moduláris ablakban megkérdezi ,hogy biztosan szeretnénk-e hogy végrehejtódjon a törlés.
-* Ha a nemre kattintunk,nem történik semmi,ha az OK-ra,akkor ajax hívás segítségével törli az adott adatot.
+* Működése: Amikor olyan műveletet hajtunk végre,ami törölni fog adatot az adatbázisból,akkor felugrik egy moduláris ablak,amiben meg kell erősítenünk a döntést. Amikor rákattintunk a törlés gombra,a delete.js megakadályozza az alapvető funkciót,és egy moduláris ablakban megkérdezi ,hogy biztosan szeretnénk-e hogy végrehejtódjon a törlés. Ha a nemre kattintunk,nem történik semmi,ha az OK-ra,akkor ajax hívás segítségével törli az adott adatot.
 
 ## Felugró ablak Tárgy felvételénél
 * Használt fájlok: addLecture_popup.js, routes.js, SubmitController.js lectures.njk, addLecture.njk
@@ -142,8 +140,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 
 ## Űrlapvalidáció
 * Használt fájlok: register.njk, https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js
-* Működése: A regisztrációs oldalon,a fromban szereplő mezőket ellenőrzi a validator.min.js,és addig nem enged regisztrálni amíg az adatok nincsenek helyesen kitöltve.
-* Továbbá visszajelzést küld a felhasználónak ha egy adat jól,vagy rosszul van kitöltve.
+* Működése: A regisztrációs oldalon,a fromban szereplő mezőket ellenőrzi a validator.min.js,és addig nem enged regisztrálni amíg az adatok nincsenek helyesen kitöltve. Továbbá visszajelzést küld a felhasználónak ha egy adat jól,vagy rosszul van kitöltve.
 
 ## Tesztek
 * Az alkalmazás a Selenium IDE segítségével lesz tesztelve.
