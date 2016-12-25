@@ -129,7 +129,7 @@ Felhasználóként egy tárgyra való jelentkezés:
 ## Megerősítő ablak felugrása bármely törlés esetén
 * Használt fájlok: delete.js, routes.js, DeleteController.js, deleteLecture.njk, lectures.njk, profile.njk, studentCourses.njk, students.njk
 * Működése: Amikor olyan műveletet hajtunk végre,ami törölni fog adatot az adatbázisból,akkor felugrik egy moduláris ablak,amiben meg kell erősítenünk a döntést. Amikor rákattintunk a törlés gombra,a delete.js megakadályozza az alapvető funkciót,és egy moduláris ablakban megkérdezi ,hogy biztosan szeretnénk-e hogy végrehejtódjon a törlés. Ha a nemre kattintunk,nem történik semmi,ha az OK-ra,akkor ajax hívás segítségével törli az adott adatot.
-![szekvenciálisdiagram](https://github.com/SecterHD/MiniNeptun/blob/master/uml/diagram.svg)
+* Szekvenciadiagram: https://github.com/SecterHD/MiniNeptun/blob/master/uml/diagram.svg
 
 ## Felugró ablak Tárgy felvételénél
 * Használt fájlok: addLecture_popup.js, routes.js, SubmitController.js lectures.njk, addLecture.njk
